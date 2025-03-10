@@ -9,7 +9,7 @@ export default function ComingSoonPage() {
   // Calculate a date 29 days from now
   const today = new Date()
   const targetDate = new Date(today)
-  targetDate.setDate(today.getDate() + 29)
+  targetDate.setDate(today.getDate() + 16)
 
   // Format the target date for display
   const formattedOpeningDate = formatDate(targetDate)
@@ -39,7 +39,7 @@ export default function ComingSoonPage() {
           COMING SOON
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl text-green-700 font-semibold mb-4 sm:mb-6 italic tracking-wide">
-          "Made by hand, eaten by hand"
+          &quot;Made by hand, eaten by hand&quot;
         </p>
       </div>
 
@@ -48,10 +48,10 @@ export default function ComingSoonPage() {
           <div className="p-5 sm:p-8">
             <div className="mb-6 sm:mb-8 text-center">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">
-                We're Firing Up Our Ovens
+                We&apos;re Firing Up Our Ovens
               </h2>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto text-sm sm:text-base">
-                We're working hard to bring you the most delicious hand-crafted pizza. Our authentic recipes and fresh
+                We&apos;re working hard to bring you the most delicious hand-crafted pizza. Our authentic recipes and fresh
                 ingredients are almost ready to serve you.
               </p>
 
