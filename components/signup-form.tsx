@@ -38,7 +38,9 @@ export default function SignupForm() {
         setEmail("")
 
         // Save the file path for display
-        setSavedFilePath(result.filePath)
+        if (result.filePath) {
+          setSavedFilePath(result.filePath)
+        }
 
         // Log the file path where emails are saved
         console.log("Emails are being saved to:", result.filePath)
@@ -120,11 +122,11 @@ export default function SignupForm() {
       </div>
 
       <div className="mt-4 text-center">
-        <p className="text-sm text-green-700 italic font-medium">"Made by hand, eaten by hand"</p>
+        <p className="text-sm text-green-700 italic font-medium">&ldquo;Made by hand, eaten by hand&rdquo;</p>
       </div>
 
       <div className="text-xs text-gray-500 text-center">
-        <p>We'll never share your email with anyone else.</p>
+        <p>We&apos;ll never share your email with anyone else.</p>
 
         {savedFilePath && (
           <p className="mt-2">

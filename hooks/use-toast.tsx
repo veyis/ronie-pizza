@@ -6,6 +6,7 @@ export type ToastProps = {
   title?: string;
   description?: string;
   type?: "default" | "success" | "error" | "warning";
+  variant?: "default" | "destructive";
   duration?: number;
 };
 
@@ -25,6 +26,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       title: props.title,
       description: props.description,
       type: props.type || "default",
+      variant: props.variant || "default",
       duration: props.duration || 3000,
     };
     
@@ -65,7 +67,9 @@ function ToastContainer() {
         <div
           key={index}
           className={`rounded-md p-4 shadow-md ${
-            toast.type === "success"
+            toast.variant === "destructive"
+              ? "bg-red-100 text-red-800 border-l-4 border-red-500"
+              : toast.type === "success"
               ? "bg-green-100 text-green-800"
               : toast.type === "error"
               ? "bg-red-100 text-red-800"
