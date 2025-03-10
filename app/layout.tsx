@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ronnie Pizza | Authentic Italian Pizza Coming Soon to West Haven, CT",
-  description: "Ronnie Pizza is bringing authentic hand-crafted Italian pizza to West Haven, CT. Join our grand opening and experience the most delicious pizza made with fresh ingredients and traditional recipes.",
-  keywords: "pizza, Italian pizza, West Haven pizza, authentic pizza, hand-crafted pizza, pizza restaurant, Ronnie Pizza, Connecticut pizza, grand opening",
+  title: "Ronnie Pizza | Authentic Italian Pizza Under New Management - Coming Soon to West Haven, CT",
+  description: "Ronnie Pizza is reopening under new management in West Haven, CT. Join our grand reopening and experience improved recipes, enhanced service, and the authentic Italian flavors you love.",
+  keywords: "pizza, Italian pizza, West Haven pizza, authentic pizza, new management, reopening, hand-crafted pizza, pizza restaurant, Ronnie Pizza, Connecticut pizza, grand reopening",
   authors: [{ name: "Ronnie Pizza" }],
   creator: "Ronnie Pizza",
   publisher: "Ronnie Pizza",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Ronnie Pizza | Authentic Italian Pizza Coming Soon to West Haven, CT",
-    description: "Ronnie Pizza is bringing authentic hand-crafted Italian pizza to West Haven, CT. Join our grand opening and experience the most delicious pizza made with fresh ingredients and traditional recipes.",
+    title: "Ronnie Pizza | Under New Management - Coming Soon to West Haven, CT",
+    description: "Ronnie Pizza is reopening under new management in West Haven, CT. Join our grand reopening and experience improved recipes, enhanced service, and the authentic Italian flavors you love.",
     url: "https://www.ronniepizza.com",
     siteName: "Ronnie Pizza",
     locale: "en_US",
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ronnie Pizza - Authentic Italian Pizza",
+        alt: "Ronnie Pizza - Authentic Italian Pizza Under New Management",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ronnie Pizza | Authentic Italian Pizza Coming Soon",
-    description: "Ronnie Pizza is bringing authentic hand-crafted Italian pizza to West Haven, CT. Join our grand opening!",
+    title: "Ronnie Pizza | Under New Management - Coming Soon",
+    description: "Ronnie Pizza is reopening under new management in West Haven, CT. Join our grand reopening!",
     images: ["/og-image.jpg"],
   },
   robots: {

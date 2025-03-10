@@ -26,8 +26,8 @@ export default function ComingSoonPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Restaurant",
-            "name": "Ronnie Pizza",
-            "description": "Authentic Italian pizza restaurant in West Haven, CT",
+            "name": "Ronnie Pizza - Under New Management",
+            "description": "Authentic Italian pizza restaurant in West Haven, CT, now under new management with improved recipes and service.",
             "image": "https://www.ronniepizza.com/logo.png",
             "priceRange": "$$",
             "servesCuisine": "Italian, Pizza",
@@ -111,10 +111,14 @@ export default function ComingSoonPage() {
               COMING SOON
             </h1>
             
-            <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-2">
               <div className="h-px w-12 bg-red-300"></div>
               <div className="text-red-600 font-medium italic">Authentic Italian Pizza</div>
               <div className="h-px w-12 bg-red-300"></div>
+            </div>
+            
+            <div className="inline-block bg-red-50 px-4 py-2 rounded-full text-red-700 font-semibold mb-6 border border-red-100 shadow-sm">
+              Under New Management
             </div>
           </header>
 
@@ -135,25 +139,50 @@ export default function ComingSoonPage() {
                   </div>
                   
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">
-                    We&apos;re Firing Up Our Ovens
+                    A Fresh Start with New Management
                   </h2>
                   
                   <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 mx-auto mb-6 rounded-full"></div>
                   
                   <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                    We&apos;re working hard to bring you the most delicious hand-crafted pizza. 
-                    Our authentic recipes and fresh ingredients are almost ready to serve you.
+                    We&apos;re excited to announce that Ronnie Pizza is reopening under new management! 
+                    We&apos;re bringing you improved recipes, enhanced service, and the same authentic 
+                    Italian flavors you love, but with a fresh new approach.
                   </p>
 
                   <div className="mb-8 sm:mb-10 bg-gradient-to-r from-red-50 to-red-100 py-5 px-8 rounded-2xl inline-block shadow-sm border border-red-100">
                     <h3 className="text-lg sm:text-xl font-medium text-gray-700 mb-1">
-                      Grand Opening
+                      Grand Reopening
                     </h3>
                     <time dateTime={isoDate} className="text-red-600 font-bold text-xl sm:text-2xl">{formattedOpeningDate}</time>
                   </div>
 
                   <div className="mb-6 sm:mb-8">
                     <CountdownTimer targetDate={targetDate.toISOString()} />
+                  </div>
+                  
+                  <div className="bg-green-50 p-4 rounded-xl border border-green-100 mb-4">
+                    <h3 className="text-green-800 font-medium mb-2">What&apos;s New:</h3>
+                    <ul className="text-left text-green-700 space-y-2 max-w-md mx-auto">
+                      <li className="flex items-start">
+                        <svg className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Improved authentic recipes with premium ingredients</span>
+                      </li>
+                      <li className="flex items-start">
+                        <svg className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Enhanced dining experience with renovated interior</span>
+                      </li>
+                      <li className="flex items-start">
+                        <svg className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>New specialty pizzas and expanded menu options</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -176,7 +205,7 @@ export default function ComingSoonPage() {
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Visit Us Soon</h3>
                   <div className="w-16 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 rounded-full"></div>
                   <p className="text-gray-600 max-w-md mx-auto mb-6">
-                    We&apos;re located in the heart of West Haven. Come experience the authentic taste of Italy!
+                    We&apos;re located in the heart of West Haven. Our new management team can&apos;t wait to welcome you and provide an exceptional dining experience!
                   </p>
                 </div>
                 <address className="not-italic">
