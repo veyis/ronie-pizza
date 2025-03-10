@@ -68,34 +68,34 @@ export default function SignupForm() {
   }
 
   // Function to test email saving
-  const testEmailSave = async () => {
-    try {
-      const response = await fetch("/api/test-email-save")
-      const data = await response.json()
+  // const testEmailSave = async () => {
+  //   try {
+  //     const response = await fetch("/api/test-email-save")
+  //     const data = await response.json()
 
-      if (data.success) {
-        toast({
-          title: "Test successful",
-          description: `Test file created at ${data.publicUrl}`,
-        })
-      } else {
-        toast({
-          title: "Test failed",
-          description: data.message,
-          variant: "destructive",
-        })
-      }
+  //     if (data.success) {
+  //       toast({
+  //         title: "Test successful",
+  //         description: `Test file created at ${data.publicUrl}`,
+  //       })
+  //     } else {
+  //       toast({
+  //         title: "Test failed",
+  //         description: data.message,
+  //         variant: "destructive",
+  //       })
+  //     }
 
-      console.log("Test email save result:", data)
-    } catch (error) {
-      console.error("Error testing email save:", error)
-      toast({
-        title: "Test failed",
-        description: "Could not test email saving",
-        variant: "destructive",
-      })
-    }
-  }
+  //     console.log("Test email save result:", data)
+  //   } catch (error) {
+  //     console.error("Error testing email save:", error)
+  //     toast({
+  //       title: "Test failed",
+  //       description: "Could not test email saving",
+  //       variant: "destructive",
+  //     })
+  //   }
+  // }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -146,14 +146,14 @@ export default function SignupForm() {
           </p>
         )}
 
-        <div className="mt-2 flex justify-center gap-2">
+        {/* <div className="mt-2 flex justify-center gap-2">
           <a href="/emails/emails.txt" target="_blank" className="text-red-600 hover:underline" rel="noreferrer">
             View all subscribers
           </a>
           <button type="button" onClick={testEmailSave} className="text-blue-600 hover:underline text-xs">
             Test email saving
           </button>
-        </div>
+        </div> */}
       </div>
     </form>
   )

@@ -1,7 +1,6 @@
 import Image from "next/image"
 import CountdownTimer from "@/components/countdown-timer"
 import SignupForm from "@/components/signup-form"
-import SocialLinks from "@/components/social-links"
 import StoreInfo from "@/components/store-info"
 import { formatDate } from "@/lib/utils"
 
@@ -28,9 +27,9 @@ export default function ComingSoonPage() {
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3244%20%281%29-Photoroom%20%281%29-qE3RtQD1kq1vB38NuVhzi2UGGvVOkH.png"
             alt="Ronnie Pizza Logo"
-            width={300}
-            height={150}
-            className="max-w-[250px] sm:max-w-[300px] h-auto"
+            width={500}
+            height={250}
+            className="max-w-[350px] sm:max-w-[400px] h-auto"
             priority
           />
         </div>
@@ -68,10 +67,6 @@ export default function ComingSoonPage() {
 
             <div className="max-w-md mx-auto">
               <SignupForm />
-              <div className="mt-6 text-center">
-                <p className="text-sm text-gray-600 mb-2">Follow us for updates:</p>
-                <SocialLinks />
-              </div>
             </div>
           </div>
         </div>
