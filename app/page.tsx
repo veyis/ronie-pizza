@@ -25,7 +25,7 @@ export default function ComingSoonPage() {
       <div className="w-full max-w-4xl mx-auto text-center mb-6 sm:mb-8 relative z-10">
         <div className="flex justify-center mb-4 sm:mb-6 transform transition-transform duration-500 hover:scale-105">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3244%20%281%29-Photoroom%20%281%29-qE3RtQD1kq1vB38NuVhzi2UGGvVOkH.png"
+            src="/logo.png"
             alt="Ronnie Pizza Logo"
             width={600}
             height={300}
@@ -33,9 +33,10 @@ export default function ComingSoonPage() {
             priority
           />
         </div>
-
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-600 mb-2 sm:mb-4 tracking-tight">
-          COMING SOON
+<br />
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-800 mb-2 sm:mb-4 tracking-tight">
+          
+          Coming Soon!
         </h1>
   
       </div>

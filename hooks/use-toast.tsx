@@ -104,16 +104,12 @@ export function useToast() {
 
 // Export a simple toast function for direct import
 export const toast = (props: ToastProps) => {
+  // Log toast for debugging purposes only
   console.log("Toast:", props);
-  // In a real implementation, this would use the context
-  // For now, we'll just log to console as a fallback
-  // This allows the component to compile even without the provider
   
-  // Show a browser alert as a simple fallback
-  if (typeof window !== "undefined") {
-    const message = props.title 
-      ? `${props.title}: ${props.description || ""}`
-      : props.description || "Notification";
-    alert(message);
-  }
+  // In a real implementation, this would use the context
+  // We're not using alert() anymore to avoid opening windows
+  
+  // The ToastProvider component will handle displaying toasts
+  // This is just a fallback for when the provider isn't available
 }; 
