@@ -27,8 +27,8 @@ export default function ComingSoonPage() {
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3244%20%281%29-Photoroom%20%281%29-qE3RtQD1kq1vB38NuVhzi2UGGvVOkH.png"
             alt="Ronnie Pizza Logo"
-            width={500}
-            height={250}
+            width={600}
+            height={300}
             className="max-w-[350px] sm:max-w-[400px] h-auto"
             priority
           />
@@ -37,9 +37,7 @@ export default function ComingSoonPage() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-600 mb-2 sm:mb-4 tracking-tight">
           COMING SOON
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-green-700 font-semibold mb-4 sm:mb-6 italic tracking-wide">
-          &quot;Made by hand, eaten by hand&quot;
-        </p>
+  
       </div>
 
       <div className="w-full max-w-3xl relative z-10">
