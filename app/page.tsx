@@ -19,7 +19,9 @@ const colors = {
   // Additional vibrant colors
   vibrant1: "rose-500",
   vibrant2: "emerald-500",
-  vibrant3: "sky-500"
+  vibrant3: "sky-500",
+  vibrant4: "purple-500",
+  vibrant5: "orange-500"
 }
 
 export default function ComingSoonPage() {
@@ -91,6 +93,8 @@ export default function ComingSoonPage() {
           <div className={`absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-${colors.vibrant1} opacity-5 blur-3xl animate-pulse`} style={{ animationDelay: '1.5s' }}></div>
           <div className={`absolute bottom-1/4 right-1/3 w-72 h-72 rounded-full bg-${colors.vibrant2} opacity-5 blur-3xl animate-pulse`} style={{ animationDelay: '2.5s' }}></div>
           <div className={`absolute top-2/3 left-1/4 w-80 h-80 rounded-full bg-${colors.vibrant3} opacity-5 blur-3xl animate-pulse`} style={{ animationDelay: '3s' }}></div>
+          <div className={`absolute top-1/2 left-1/2 w-60 h-60 rounded-full bg-${colors.vibrant4} opacity-5 blur-3xl animate-pulse`} style={{ animationDelay: '3.5s' }}></div>
+          <div className={`absolute bottom-1/3 left-1/6 w-48 h-48 rounded-full bg-${colors.vibrant5} opacity-5 blur-3xl animate-pulse`} style={{ animationDelay: '4s' }}></div>
           
           {/* Decorative elements */}
           <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-${colors.primaryDark} via-${colors.primary} to-${colors.primaryDark}`}></div>
@@ -108,6 +112,15 @@ export default function ComingSoonPage() {
           <div className="absolute top-1/2 right-24 hidden lg:block opacity-20 animate-float-slow">
             <div className={`w-16 h-4 rounded-full border-2 border-${colors.vibrant3}/40`}></div>
           </div>
+          <div className="absolute top-40 right-1/3 hidden lg:block opacity-20 animate-float">
+            <div className={`w-10 h-10 rounded-full border-2 border-${colors.vibrant4}/40`}></div>
+          </div>
+          <div className="absolute bottom-40 left-1/4 hidden lg:block opacity-20 animate-float-delayed">
+            <div className={`w-6 h-6 transform rotate-45 border-2 border-${colors.vibrant5}/40`}></div>
+          </div>
+          
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[url('/grid-pattern.png')] bg-repeat opacity-5"></div>
           
           {/* Floating ingredients (hidden on mobile) */}
           <div className="absolute top-1/4 left-1/6 hidden lg:block opacity-20 animate-float">
@@ -149,8 +162,9 @@ export default function ComingSoonPage() {
               <div className={`h-px w-12 bg-${colors.primary}/50`}></div>
             </div>
             
-            <div className={`inline-block bg-${colors.white}/80 backdrop-blur-sm px-6 py-3 rounded-sm text-${colors.primaryDark} font-semibold mb-6 border border-${colors.border} shadow-sm tracking-wider uppercase text-sm`}>
-              Under New Management
+            <div className={`inline-block bg-${colors.white}/80 backdrop-blur-sm px-6 py-3 rounded-sm text-${colors.primaryDark} font-semibold mb-6 border border-${colors.border} shadow-sm tracking-wider uppercase text-sm relative overflow-hidden group`}>
+              <div className={`absolute inset-0 w-full h-full bg-gradient-to-r from-${colors.primary}/0 via-${colors.primary}/10 to-${colors.primary}/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out`}></div>
+              <span className="relative z-10">Under New Management</span>
             </div>
           </header>
 
@@ -163,21 +177,25 @@ export default function ComingSoonPage() {
                   <div className="inline-block mb-6">
                     <div className={`w-16 h-16 border border-${colors.border} rounded-full flex items-center justify-center relative overflow-hidden group-hover:border-${colors.primary}/50 transition-colors duration-500`}>
                       <div className={`absolute inset-0 bg-gradient-to-br from-${colors.vibrant1}/10 via-transparent to-${colors.vibrant3}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                      <div className={`absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-${colors.primary}/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out`}></div>
                       <Image 
                         src="/pizza-icon.svg" 
                         alt="Pizza Icon" 
                         width={32} 
                         height={32}
-                        className="opacity-80 relative z-10"
+                        className="opacity-80 relative z-10 group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                   </div>
                   
-                  <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-${colors.textDark} mb-4 sm:mb-6 font-serif`}>
-                    A Fresh Start with New Management
+                  <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-${colors.textDark} mb-4 sm:mb-6 font-serif relative`}>
+                    <span className="relative inline-block">
+                      A Fresh Start with New Management
+                      <span className={`absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-${colors.primary}/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out`}></span>
+                    </span>
                   </h2>
                   
-                  <div className={`w-24 h-px bg-gradient-to-r from-${colors.primary}/30 via-${colors.accent} to-${colors.primary}/30 mx-auto mb-8 rounded-full`}></div>
+                  <div className={`w-24 h-px bg-gradient-to-r from-${colors.primary}/30 via-${colors.accent} to-${colors.primary}/30 mx-auto mb-8 rounded-full group-hover:w-32 transition-all duration-500`}></div>
                   
                   <p className={`text-${colors.textMedium} mb-10 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed`}>
                     We&apos;re excited to announce that Ronnie Pizza is reopening under new management! 
@@ -187,6 +205,7 @@ export default function ComingSoonPage() {
 
                   <div className={`mb-10 sm:mb-12 bg-${colors.white}/80 backdrop-blur-sm py-6 px-10 inline-block shadow-sm border border-${colors.border} relative overflow-hidden group-hover:border-${colors.primary}/30 transition-colors duration-500`}>
                     <div className={`absolute inset-0 bg-gradient-to-br from-${colors.vibrant1}/5 via-transparent to-${colors.vibrant3}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                    <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-${colors.primary}/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out`}></div>
                     <h3 className={`text-lg sm:text-xl font-medium text-${colors.textMedium} mb-2 uppercase tracking-wider relative z-10`}>
                       Grand Reopening
                     </h3>
@@ -199,25 +218,26 @@ export default function ComingSoonPage() {
                   
                   <div className={`bg-${colors.secondary}/80 backdrop-blur-sm p-6 border border-${colors.border} mb-4 relative overflow-hidden group-hover:border-${colors.primary}/30 transition-colors duration-500`}>
                     <div className={`absolute inset-0 bg-gradient-to-br from-${colors.vibrant2}/5 via-transparent to-${colors.vibrant1}/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                    <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-${colors.primary}/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out`}></div>
                     <h3 className={`text-${colors.primaryDark} font-medium mb-6 uppercase tracking-wider relative z-10`}>The Premium Experience:</h3>
                     <ul className={`text-left text-${colors.textMedium} space-y-4 max-w-md mx-auto relative z-10`}>
-                      <li className="flex items-start">
-                        <svg className={`h-5 w-5 text-${colors.primary} mr-3 mt-0.5 flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <li className="flex items-start group/item">
+                        <svg className={`h-5 w-5 text-${colors.primary} mr-3 mt-0.5 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        <span className="font-light">Artisanal recipes crafted with imported Italian ingredients</span>
+                        <span className="font-light group-hover/item:text-gray-700 transition-colors duration-300">Artisanal recipes crafted with imported Italian ingredients</span>
                       </li>
-                      <li className="flex items-start">
-                        <svg className={`h-5 w-5 text-${colors.primary} mr-3 mt-0.5 flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <li className="flex items-start group/item">
+                        <svg className={`h-5 w-5 text-${colors.primary} mr-3 mt-0.5 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        <span className="font-light">Elegant dining atmosphere with sophisticated décor</span>
+                        <span className="font-light group-hover/item:text-gray-700 transition-colors duration-300">Elegant dining atmosphere with sophisticated décor</span>
                       </li>
-                      <li className="flex items-start">
-                        <svg className={`h-5 w-5 text-${colors.primary} mr-3 mt-0.5 flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <li className="flex items-start group/item">
+                        <svg className={`h-5 w-5 text-${colors.primary} mr-3 mt-0.5 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        <span className="font-light">Curated selection of fine wines and craft cocktails</span>
+                        <span className="font-light group-hover/item:text-gray-700 transition-colors duration-300">Curated selection of fine wines and craft cocktails</span>
                       </li>
                     </ul>
                   </div>
@@ -233,17 +253,21 @@ export default function ComingSoonPage() {
                   <div className="inline-block mb-6">
                     <div className={`w-14 h-14 border border-${colors.border} rounded-full flex items-center justify-center relative overflow-hidden group-hover:border-${colors.primary}/50 transition-colors duration-500`}>
                       <div className={`absolute inset-0 bg-gradient-to-br from-${colors.vibrant3}/10 via-transparent to-${colors.vibrant1}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                      <div className={`absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-${colors.primary}/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out`}></div>
                       <Image 
                         src="/location-icon.svg" 
                         alt="Location Icon" 
                         width={28} 
                         height={28}
-                        className="opacity-80 relative z-10"
+                        className="opacity-80 relative z-10 group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                   </div>
-                  <h3 className={`text-xl sm:text-2xl font-bold text-${colors.textDark} mb-3 font-serif`}>Visit Our Establishment</h3>
-                  <div className={`w-16 h-px bg-gradient-to-r from-${colors.primary}/30 via-${colors.accent} to-${colors.primary}/30 mx-auto mb-6 rounded-full`}></div>
+                  <h3 className={`text-xl sm:text-2xl font-bold text-${colors.textDark} mb-3 font-serif relative inline-block`}>
+                    Visit Our Establishment
+                    <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-${colors.primary}/30 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out`}></span>
+                  </h3>
+                  <div className={`w-16 h-px bg-gradient-to-r from-${colors.primary}/30 via-${colors.accent} to-${colors.primary}/30 mx-auto mb-6 rounded-full group-hover:w-24 transition-all duration-500`}></div>
                   <p className={`text-${colors.textMedium} max-w-md mx-auto mb-8 font-light`}>
                     Located in the heart of West Haven, our establishment offers an exceptional dining experience with attentive service and a sophisticated ambiance.
                   </p>
@@ -259,26 +283,27 @@ export default function ComingSoonPage() {
           <footer className="text-center relative z-10 mt-16 mb-8">
             <div className="mb-6">
               <div className="flex items-center justify-center gap-6">
-                <a href="https://www.facebook.com/ronniepizza" aria-label="Facebook" className={`text-${colors.textLight} hover:text-${colors.primaryDark} transition-colors`}>
+                <a href="https://www.facebook.com/ronniepizza" aria-label="Facebook" className={`text-${colors.textLight} hover:text-${colors.primaryDark} transition-colors duration-300 transform hover:scale-110`}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
                   </svg>
                 </a>
-                <a href="https://www.instagram.com/ronniepizza" aria-label="Instagram" className={`text-${colors.textLight} hover:text-${colors.primaryDark} transition-colors`}>
+                <a href="https://www.instagram.com/ronniepizza" aria-label="Instagram" className={`text-${colors.textLight} hover:text-${colors.primaryDark} transition-colors duration-300 transform hover:scale-110`}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                   </svg>
                 </a>
               </div>
             </div>
-            <div className={`h-px w-24 bg-gradient-to-r from-${colors.primary}/20 via-${colors.accent}/40 to-${colors.primary}/20 mx-auto mb-6`}></div>
+            <div className={`h-px w-24 bg-gradient-to-r from-${colors.primary}/20 via-${colors.accent}/40 to-${colors.primary}/20 mx-auto mb-6 hover:w-32 transition-all duration-500`}></div>
             <p className={`font-light text-${colors.textMedium} text-sm tracking-wider`}>© {new Date().getFullYear()} Ronnie Pizza. All rights reserved.</p>
             <p className="mt-2">
               <a 
                 href="https://www.ronniepizza.com" 
-                className={`text-${colors.primaryDark} hover:text-${colors.primary} transition-colors font-light text-sm tracking-wider`}
+                className={`text-${colors.primaryDark} hover:text-${colors.primary} transition-colors font-light text-sm tracking-wider relative inline-block group`}
               >
                 www.ronniepizza.com
+                <span className={`absolute -bottom-1 left-0 w-full h-px bg-${colors.primary}/30 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></span>
               </a>
             </p>
           </footer>
