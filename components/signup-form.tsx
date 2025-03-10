@@ -29,6 +29,9 @@ export default function SignupForm() {
 
     try {
       const result = await saveEmail(email)
+      
+      // Debug the server action response
+      console.log("Server action response:", result)
 
       if (result.success) {
         toast({
@@ -45,6 +48,7 @@ export default function SignupForm() {
         // Log the file path where emails are saved
         console.log("Emails are being saved to:", result.filePath)
       } else {
+        console.error("Email save failed with result:", result)
         toast({
           title: "Something went wrong.",
           description: result.message || "Please try again later.",
@@ -52,12 +56,12 @@ export default function SignupForm() {
         })
       }
     } catch (error) {
+      console.error("Error in form submission:", error)
       toast({
         title: "Something went wrong.",
         description: "Please try again later.",
         variant: "destructive",
       })
-      console.error("Error in form submission:", error)
     } finally {
       setIsLoading(false)
     }
